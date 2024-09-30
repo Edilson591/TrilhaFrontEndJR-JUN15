@@ -1,0 +1,17 @@
+@use "../variables.scss" as variables; 
+@use "sass:color";
+
+.button {
+    padding: 10px;
+    font-size: 18px;
+    color: variables.$thirdColor; 
+    border-radius: 8px;
+    background-color: transparent; 
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .5s ease;
+    &:hover {
+        background-color: variables.$secundaryColor; 
+    }
+}

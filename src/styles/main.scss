@@ -1,0 +1,33 @@
+@use "header.scss";
+@use "variables.scss";
+@use "components/button.scss";
+@use "media.scss";
+@use "section.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: variables.$thirdColor;
+    list-style: none;
+    font-family: roboto,sans-serif;
+}
+body {
+    // background-color: ;
+    background:linear-gradient(to bottom, variables.$primaryColor, variables.$secundaryColor)
+}
+
+.container {
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5.6vw;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+// .is-active {
+
+// }

@@ -1,0 +1,74 @@
+@use "variables.scss";
+
+@media (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+    &__nav {
+        flex-grow: 0;
+      &__button {
+        cursor: pointer;
+        background-color: #0000;
+        border: none;
+        border-radius: 8px;
+        gap: .5rem;
+        padding: 6px;
+        display: flex;
+        z-index: 150;
+        &__menu {
+            width: 20px;
+            border-top: 3px solid;
+            color: variables.$secundaryColor;
+            &--is-active {
+                border-top: none;
+                &::after {
+                    transform: rotate(-135deg);
+                    top: -8px;
+                }
+                &::before {
+                    transform: rotate(135deg);
+                }
+            }
+            &::after,
+            &::before {
+              content: "";
+              display: block;
+              position: relative;
+              width: 20px;
+              height: 3px;
+              margin-top: 5px;
+              background: currentColor;
+              transition: all .5s ease-in-out;
+            }
+        }
+      }
+      &__links {
+        z-index: 100;
+        border-radius: 8px;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        backdrop-filter: blur(2px);
+        font-size: 2rem;
+        padding: 20px;
+        display: flex;
+        position: absolute;
+        top: -100vh;
+        width: 100vw;
+        height: 100vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+        transition: top .5s ease;
+        &--is-active {
+            top: 50%;
+            transition: top .5s ease;
+        }
+      }
+    }
+  }
+  .sobre {
+      &__container {
+          grid-template-columns: repeat(1, minmax(150px, 1fr));
+      }
+  }
+}

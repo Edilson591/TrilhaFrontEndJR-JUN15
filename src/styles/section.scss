@@ -1,0 +1,48 @@
+@use "variables.scss";
+
+.sobre {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+    margin-top: 25px;
+    padding: 80px 20px;
+    box-shadow: 0 4px 10px #0000004d;
+  &__container {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+  }
+  &__foto {
+    width: 250px;
+    border: 2px solid variables.$secundaryColor;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  &__descricao {
+    &__title {
+        margin-bottom: 1rem;
+        background: linear-gradient(to top, #00000036, variables.$thirdColor);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 4px 10px rgba(variables.$primaryColor, 0.3);
+        &__especial{
+            background: transparent;
+            -webkit-text-fill-color: variables.$secundaryColor;
+        }
+    }
+    text-align: center;
+    display: block;
+    margin: auto;
+
+    &__description {
+      max-width: 600px;
+      text-align: left;
+    }
+  }
+}

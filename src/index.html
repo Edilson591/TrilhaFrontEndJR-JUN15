@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha front end Jr</title>
+
+    <!-- fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- estilos -->
+    <link rel="stylesheet" href="styles/main.scss">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__logo">
+                <img src="assets/icons/logo_code.webp" alt="logo code coders">
+            </div>
+            <nav class="header__nav">
+                <ul role="menu" class="header__nav__links">
+                    <li><a href="#sobre" class="header__nav__link button">Sobre</a></li>
+                    <li><a href="#hobbies" class="header__nav__link button">Hobbies</a></li>
+                    <li><a href="#motivação" class="header__nav__link button">Motivação</a></li>
+                </ul>
+                <button id="btn-mobile" class="header__nav__button" aria-label="Abrir Menu" aria-haspopup="true"
+                    aria-controls="menu" aria-expanded="false">
+                    <span id="hamburguer" class="header__nav__button__menu"></span>
+                </button>
+            </nav>
+        </header>
+        <main>
+            <section id="sobre" class="sobre">
+                <div class="sobre__container">
+                    <img src="assets/imagens/profile-photo.png" alt="foto perfil" class="sobre__foto">
+                    <div class="sobre__descricao">
+                        <h2 class="sobre__descricao__title">Desenvolvedor front End<span sobre__descricao__title__especial>.</span></h2>
+                        <p class="sobre__descricao__description">
+                            Olá! Sou Edilson Luciano, tenho 30 anos, e sou um entusiasta da programação. Estudo na EBAC
+                            (Escola Britânica de Artes Criativas) e estou atualmente buscando uma posição em uma empresa
+                            que me permita aplicar minhas habilidades em desenvolvimento web e mobile. Tenho interesse
+                            em áreas como desenvolvimento de aplicações, design de interface do usuário e tecnologias
+                            emergentes, e estou sempre em busca de aprender novas tecnologias e aprimorar minhas
+                            habilidades. Meu objetivo é contribuir para projetos inovadores e impactantes, além de
+                            trabalhar em uma empresa que valorize o desenvolvimento contínuo e a colaboração em equipe.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
