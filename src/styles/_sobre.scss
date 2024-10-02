@@ -1,0 +1,61 @@
+@use "variables.scss";
+
+.sobre {
+  background: linear-gradient(#0000003b,variables.$primaryColor);
+  max-width: 1200px;
+  padding: 2rem;
+  border-radius: 8px;
+  &__profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+
+    &__photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid variables.$thirdColor;
+      box-shadow: 0 4px 6px rgba(variables.$primaryColor, 0.1);
+    }
+
+    &__title {
+      margin-left: 2rem;
+      h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(to top, #00000036, variables.$thirdColor);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 4px 10px rgba(variables.$primaryColor, 0.3);
+        @media (max-width: 678px) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  &__description {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    text-align: left;
+    color: variables.$colorTextSecudary;
+
+    @media (max-width: 678px) {
+      font-size: 0.8rem;
+    }
+  } 
+  &__contato {
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: end;
+      a {
+        i {
+          color: variables.$secundaryColor;
+        }
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@
     font-size: 18px;
     color: variables.$thirdColor; 
     border-radius: 8px;
-    background-color: transparent; 
+    background-color: color.adjust(variables.$secundaryColor, $lightness: -15%); 
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;

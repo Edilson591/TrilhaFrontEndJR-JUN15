@@ -9,21 +9,33 @@
     <!-- fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <!-- icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <!-- estilos -->
     <link rel="stylesheet" href="styles/main.scss">
 </head>
 
 <body>
     <div class="container">
-        <header class="header">
+        <header class="header" role="banner" aria-label="Cabeçalho do site">
             <div class="header__logo">
-                <img src="assets/icons/logo_code.webp" alt="logo code coders">
+                <img src="assets/icons/logo_code.webp" alt="Logo da Code Coders" />
             </div>
-            <nav class="header__nav">
-                <ul role="menu" class="header__nav__links">
-                    <li><a href="#sobre" class="header__nav__link button">Sobre</a></li>
-                    <li><a href="#hobbies" class="header__nav__link button">Hobbies</a></li>
-                    <li><a href="#motivação" class="header__nav__link button">Motivação</a></li>
+            <nav class="header__nav" aria-label="Navegação principal">
+                <ul role="menubar" class="header__nav__links">
+                    <li role="none">
+                        <a href="#sobre" role="menuitem" class="header__nav__link button"
+                            aria-label="Ir para a seção Sobre">Sobre</a>
+                    </li>
+                    <li role="none">
+                        <a href="#hobbies" role="menuitem" class="header__nav__link button"
+                            aria-label="Ir para a seção Hobbies">Hobbies</a>
+                    </li>
+                    <li role="none">
+                        <a href="#motivacao" role="menuitem" class="header__nav__link button"
+                            aria-label="Ir para a seção Motivação">Motivação</a>
+                    </li>
                 </ul>
                 <button id="btn-mobile" class="header__nav__button" aria-label="Abrir Menu" aria-haspopup="true"
                     aria-controls="menu" aria-expanded="false">
@@ -31,22 +43,112 @@
                 </button>
             </nav>
         </header>
+
         <main>
-            <section id="sobre" class="sobre">
+            <section id="sobre" class="sobre" aria-labelledby="sobre-title">
                 <div class="sobre__container">
-                    <img src="assets/imagens/profile-photo.png" alt="foto perfil" class="sobre__foto">
-                    <div class="sobre__descricao">
-                        <h2 class="sobre__descricao__title">Desenvolvedor front End<span sobre__descricao__title__especial>.</span></h2>
-                        <p class="sobre__descricao__description">
-                            Olá! Sou Edilson Luciano, tenho 30 anos, e sou um entusiasta da programação. Estudo na EBAC
-                            (Escola Britânica de Artes Criativas) e estou atualmente buscando uma posição em uma empresa
-                            que me permita aplicar minhas habilidades em desenvolvimento web e mobile. Tenho interesse
-                            em áreas como desenvolvimento de aplicações, design de interface do usuário e tecnologias
-                            emergentes, e estou sempre em busca de aprender novas tecnologias e aprimorar minhas
-                            habilidades. Meu objetivo é contribuir para projetos inovadores e impactantes, além de
-                            trabalhar em uma empresa que valorize o desenvolvimento contínuo e a colaboração em equipe.
-                        </p>
+                    <div class="sobre__profile" role="group" aria-labelledby="profile-title">
+                        <img class="sobre__profile__photo" src="assets/imagens/profile-photo.png"
+                            alt="Foto de perfil de Edilson Luciano" />
+                        <div class="sobre__profile__title" id="profile-title">
+                            <h2>Desenvolvedor Front End</h2>
+                        </div>
                     </div>
+                    <p class="sobre__description" aria-describedby="sobre-description">
+                        Olá! Sou Edilson Luciano, tenho 30 anos, e sou um entusiasta da programação. Estudo na EBAC
+                        (Escola Britânica de Artes Criativas) e estou atualmente buscando uma posição em uma empresa que
+                        me permita aplicar minhas habilidades em desenvolvimento web e mobile. Tenho interesse em áreas
+                        como desenvolvimento de aplicações, design de interface do usuário e tecnologias emergentes, e
+                        estou sempre em busca de aprender novas tecnologias e aprimorar minhas habilidades. Meu objetivo
+                        é contribuir para projetos inovadores e impactantes, além de trabalhar em uma empresa que
+                        valorize o desenvolvimento contínuo e a colaboração em equipe.
+                    </p>
+                    <div class="sobre__contato">
+                        <ul class="sobre__contato__list">
+                          <li class="sobre__contato__item">
+                            <a href="https://www.linkedin.com/in/seu-perfil" target="_blank" class="sobre__contato__link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                          </li>
+                          <li class="sobre__contato__item">
+                            <a href="https://github.com/seu-usuario" target="_blank" class="sobre__contato__link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                </div>
+            </section>
+            <section id="hobbies" class="hobbies" aria-labelledby="hobbies-title">
+                <div class="hobbies__container">
+                    <h2 id="hobbies-title" class="hobbies__title">Meus Hobbies</h2>
+                    <ul class="hobbies__itens" role="list">
+                        <li class="hobbies__itens__item" role="listitem" tabindex="0" aria-labelledby="hobbies-item-1">
+                            <i class="fas fa-running" aria-hidden="true"></i>
+                            <h3 id="hobbies-item-1" class="hobbies__itens__item__title">Correr</h3>
+                            <p class="hobbies__itens__item__description">Correr é uma das minhas atividades favoritas
+                                para
+                                manter corpo e mente saudáveis.</p>
+                        </li>
+                        <li class="hobbies__itens__item" role="listitem" tabindex="0" aria-labelledby="hobbies-item-2">
+                            <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                            <h3 id="hobbies-item-2" class="hobbies__itens__item__title">Programar</h3>
+                            <p class="hobbies__itens__item__description">Programar é a minha maior paixão e uma forma de
+                                expressar criatividade enquanto resolvo problemas.</p>
+                        </li>
+                        <li class="hobbies__itens__item" role="listitem" tabindex="0" aria-labelledby="hobbies-item-3">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                            <h3 id="hobbies-item-3" class="hobbies__itens__item__title">Estudar</h3>
+                            <p class="hobbies__itens__item__description">Adquirir conhecimento é uma das minhas maiores
+                                paixões.</p>
+                        </li>
+                        <li class="hobbies__itens__item" role="listitem" tabindex="0" aria-labelledby="hobbies-item-4">
+                            <i class="fas fa-tv" aria-hidden="true"></i>
+                            <h3 id="hobbies-item-4" class="hobbies__itens__item__title">Assistir</h3>
+                            <p class="hobbies__itens__item__description">Assistir é uma das minhas formas favoritas de
+                                relaxamento e entretenimento.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="motivacao" class="motivacao" aria-labelledby="motivacao-title">
+                <div class="motivacao__container">
+                    <h2 id="motivacao-title" class="motivacao__title">Minha Motivação</h2>
+                    <ul class="motivacao__itens" role="list">
+                        <li class="motivacao__itens__item" role="listitem" tabindex="0">
+                            <div class="motivacao__itens__item__icon" aria-hidden="true">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3 class="motivacao__itens__item__title" id="inspiracao-title">Inspiração</h3>
+                            <p class="motivacao__itens__item__description" aria-labelledby="inspiracao-title">Buscar
+                                inspiração em tudo ao meu redor me ajuda a manter a criatividade viva.</p>
+                        </li>
+                        <li class="motivacao__itens__item" role="listitem" tabindex="0">
+                            <div class="motivacao__itens__item__icon" aria-hidden="true">
+                                <i class="fas fa-hand-fist"></i>
+                            </div>
+                            <h3 class="motivacao__itens__item__title" id="determinacao-title">Determinação</h3>
+                            <p class="motivacao__itens__item__description" aria-labelledby="determinacao-title">A
+                                determinação é essencial para alcançar meus objetivos e superar desafios.</p>
+                        </li>
+                        <li class="motivacao__itens__item" role="listitem" tabindex="0">
+                            <div class="motivacao__itens__item__icon" aria-hidden="true">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="motivacao__itens__item__title" id="crescimento-title">Crescimento</h3>
+                            <p class="motivacao__itens__item__description" aria-labelledby="crescimento-title">A busca
+                                constante por crescimento pessoal e profissional é uma das minhas maiores motivações.
+                            </p>
+                        </li>
+                        <li class="motivacao__itens__item" role="listitem" tabindex="0">
+                            <div class="motivacao__itens__item__icon" aria-hidden="true">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3 class="motivacao__itens__item__title" id="paixao-title">Paixão</h3>
+                            <p class="motivacao__itens__item__description" aria-labelledby="paixao-title">Fazer o que
+                                amo é o que me motiva a levantar todos os dias e dar o meu melhor.</p>
+                        </li>
+                    </ul>
                 </div>
             </section>
         </main>

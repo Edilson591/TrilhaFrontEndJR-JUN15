@@ -1,0 +1,63 @@
+@use "variables.scss";
+@use "sass:color";
+
+.motivacao {
+  &__container {
+    text-align: center;
+    margin-top: 100px ;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  &__itens {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(variables.$primaryColor, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: color.adjust(variables.$secundaryColor, $lightness: -20%);
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(variables.$primaryColor, 0.8);
+      }
+      &__icon {
+        font-size: 3rem;
+        color: variables.$colorCardMotivacao;
+        margin-bottom: 1rem;
+        transition: transform 0.3s;
+        i {
+            color: variables.$primaryColor;
+        }
+      }
+
+      &__title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: variables.$thirdColor;
+        text-align: center;
+      }
+
+      &__description {
+        color: rgba(variables.$thirdColor, 0.8);
+        text-align: center;
+        padding: 0 1rem;
+      }
+    }
+  }
+}

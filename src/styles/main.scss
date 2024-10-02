@@ -2,7 +2,9 @@
 @use "variables.scss";
 @use "components/button.scss";
 @use "media.scss";
-@use "section.scss";
+@use "sobre";
+@use "hobbies";
+@use "motivacao";
 
 *{
     margin: 0;
@@ -15,7 +17,10 @@
 }
 body {
     // background-color: ;
-    background:linear-gradient(to bottom, variables.$primaryColor, variables.$secundaryColor)
+    background:linear-gradient(-135deg,variables.$primaryColor, variables.$secundaryColor)
+}
+main {
+    margin-top: 100px;
 }
 
 .container {
@@ -23,8 +28,7 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 5.6vw;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     position: relative;
 }
 
