@@ -11,18 +11,20 @@
         rel="stylesheet">
     <!-- icons  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <!-- estilos -->
     <link rel="stylesheet" href="styles/main.scss">
 </head>
 
 <body>
     <div class="container">
+        <!-- header responsavel pelo nav e o menu humburguer -->
         <header class="header" role="banner" aria-label="Cabeçalho do site">
             <div class="header__logo">
+                <!-- logo do code coders -->
                 <img src="assets/icons/logo_code.webp" alt="Logo da Code Coders" />
             </div>
             <nav class="header__nav" aria-label="Navegação principal">
+                <!-- barra de navegação -->
                 <ul role="menubar" class="header__nav__links">
                     <li role="none">
                         <a href="#sobre" role="menuitem" class="header__nav__link button"
@@ -37,6 +39,7 @@
                             aria-label="Ir para a seção Motivação">Motivação</a>
                     </li>
                 </ul>
+                <!-- botão hamburguer ativado com media care -->
                 <button id="btn-mobile" class="header__nav__button" aria-label="Abrir Menu" aria-haspopup="true"
                     aria-controls="menu" aria-expanded="false">
                     <span id="hamburguer" class="header__nav__button__menu"></span>
@@ -45,6 +48,7 @@
         </header>
 
         <main>
+            <!-- sessão sobre contando um pouco sobr mim -->
             <section id="sobre" class="sobre" aria-labelledby="sobre-title">
                 <div class="sobre__container">
                     <div class="sobre__profile" role="group" aria-labelledby="profile-title">
@@ -63,6 +67,7 @@
                         é contribuir para projetos inovadores e impactantes, além de trabalhar em uma empresa que
                         valorize o desenvolvimento contínuo e a colaboração em equipe.
                     </p>
+                    <!-- meus links de redes sociais -->
                     <div class="sobre__contato">
                         <ul class="sobre__contato__list">
                           <li class="sobre__contato__item">
@@ -79,9 +84,11 @@
                       </div>
                 </div>
             </section>
+            <!-- sessão meus hobbies -->
             <section id="hobbies" class="hobbies" aria-labelledby="hobbies-title">
                 <div class="hobbies__container">
                     <h2 id="hobbies-title" class="hobbies__title">Meus Hobbies</h2>
+                    <!-- todos os meu hobbies listados -->
                     <ul class="hobbies__itens" role="list">
                         <li class="hobbies__itens__item" role="listitem" tabindex="0" aria-labelledby="hobbies-item-1">
                             <i class="fas fa-running" aria-hidden="true"></i>
@@ -111,9 +118,11 @@
                     </ul>
                 </div>
             </section>
+            <!-- sessão minhas motivações diarias -->
             <section id="motivacao" class="motivacao" aria-labelledby="motivacao-title">
                 <div class="motivacao__container">
                     <h2 id="motivacao-title" class="motivacao__title">Minha Motivação</h2>
+                    <!-- listagem de motivações -->
                     <ul class="motivacao__itens" role="list">
                         <li class="motivacao__itens__item" role="listitem" tabindex="0">
                             <div class="motivacao__itens__item__icon" aria-hidden="true">
